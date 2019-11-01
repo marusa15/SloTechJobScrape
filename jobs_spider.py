@@ -15,7 +15,7 @@ class JobsSpider(scrapy.Spider):
                 'title': job.xpath('td[@class="name"]/h3/a/text()').get(),
                 'department': job.xpath('td[@class="name"]/div/span[@class="oddelek"]/a/text()').get(),
                 'poster': job.xpath('td[@class="company"]/a/text()').get(),
-                'url': job.xpath('td[@class="name"]/h3/a/@href').get(),
+                'url': 'https://slo-tech.com' + job.xpath('td[@class="name"]/h3/a/@href').get(),
             }
 
       
